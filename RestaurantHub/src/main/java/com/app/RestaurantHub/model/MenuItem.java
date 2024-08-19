@@ -17,7 +17,7 @@ public class MenuItem {
     @Column(nullable = false)
     private Float price;
 
-    @Column(name = "created_at", updatable = false, nullable = false)
+    @Column(name = "created_at", updatable = false, nullable = true)
     private LocalDateTime createdAt;
 
     @PrePersist

@@ -1,7 +1,9 @@
 package com.app.RestaurantHub.model;
 
 import java.time.LocalDateTime;
+
 import java.util.List;
+import java.util.stream.Collectors;
 
 import jakarta.persistence.*;
 
@@ -14,7 +16,7 @@ public class Order {
     private Long orderId;
 
     @Column(name="price")
-    private float price;
+    private Float price;
     
     @OneToOne
     @JoinColumn(name="table_id", nullable = true)
@@ -63,5 +65,25 @@ public class Order {
 
     public List<MenuItem> getMenuItems() { return menuItems; }
     public void setMenuItems(List<MenuItem> menuItems) { this.menuItems = menuItems; }
+
+
+    public Long getTableId() {
+        return table.getTableId();
+    }
+
+    public Long getCustomerId() {
+        return customer.getCustomerId();
+    }
+
+    public Long getServerId() {
+        return server.getEmployeeId();
+    }
+
+    public List<Long> getMenuItemIds() {
+        return menuItems.stream()
+            .map(MenuItem::getItemId)
+            .collect(Collectors.toList());
+    }
+
 
 }

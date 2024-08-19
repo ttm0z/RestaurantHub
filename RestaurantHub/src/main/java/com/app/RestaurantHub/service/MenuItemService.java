@@ -22,6 +22,10 @@ public class MenuItemService {
         return MenuItemRepository.findById(id);
     }
 
+    public List<MenuItem> getMenuItemsById(List<Long> ids){
+        return MenuItemRepository.findAllById(ids);
+    }
+        
     public MenuItem saveMenuItem(MenuItem menuItem) {
         return MenuItemRepository.save(menuItem);
     }

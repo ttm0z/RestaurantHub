@@ -38,10 +38,10 @@ public class MenuItemController {
         Optional<MenuItem> menuItem = MenuItemService.getMenuItemById(id);
         if (menuItem.isPresent()){
             MenuItem updatedMenuItem = menuItem.get();
+            
             updatedMenuItem.setItemName(MenuItemDetails.getItemName());
             updatedMenuItem.setPrice(MenuItemDetails.getPrice());
-            //otherfieldsasneeded
-
+            
             MenuItemService.saveMenuItem(updatedMenuItem);
             return ResponseEntity.ok(updatedMenuItem);
         }

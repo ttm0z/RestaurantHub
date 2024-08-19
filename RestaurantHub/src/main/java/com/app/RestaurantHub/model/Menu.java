@@ -2,7 +2,9 @@ package com.app.RestaurantHub.model;
 
 import java.time.LocalDateTime;
 import jakarta.persistence.*;
+
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(name="menus")
@@ -41,4 +43,9 @@ public class Menu {
     public List<MenuItem> getMenuItems() { return menuItems; }
     public void setMenuItems(List<MenuItem> menuItems) { this.menuItems = menuItems;}
 
+    public List<Long> getMenuItemIds() {
+        return this.getMenuItems().stream()
+            .map(MenuItem::getItemId)
+            .collect(Collectors.toList());
+    }
 }

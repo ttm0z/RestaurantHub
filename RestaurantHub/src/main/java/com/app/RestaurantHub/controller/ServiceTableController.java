@@ -34,13 +34,19 @@ public class ServiceTableController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ServiceTable> updateServiceTable(@PathVariable Long id, @RequestBody ServiceTable ServiceTableDetails) {
+    public ResponseEntity<ServiceTable> updateServiceTable(@PathVariable Long id, @RequestBody ServiceTable serviceTableDetails) {
         Optional<ServiceTable> serviceTable = ServiceTableService.getServiceTableById(id);
         if (serviceTable.isPresent()){
             ServiceTable updatedServiceTable = serviceTable.get();
             
-            updatedServiceTable.setTableNumber(ServiceTableDetails.getTableNumber());
-            updatedServiceTable.setOrder(ServiceTableDetails.getOrder());
+            updatedServiceTable.setTableNumber(serviceTableDetails.getTableNumber());
+            
+            if(serviceTableDetails.getOrderId() != null) {
+                updatedServiceTable.setOrderId(serviceTableDetails.getOrderId());
+            }
+            else {
+                updatedServiceTable.setOrderId(null);
+            }
             
             ServiceTableService.saveServiceTable(updatedServiceTable);
             return ResponseEntity.ok(updatedServiceTable);

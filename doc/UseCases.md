@@ -1,10 +1,19 @@
-Use Case 1: A Server takes an order
-- A group of customers enter the establishment and are greeted by a server
-- The server decides where in the restaurant to seat the group
-- The group is seated and are offered drinks while deciding on their order
-- The server takes the customers order manually
-- The server puts the order into the system [Contact with System]
-  - An order object is initialized.
-  - The server adds the requested items to the order object using the OrderManager interface
-  - The server indicates to the system that the order is complete
-  - The order is sent to the kitchen
+### Use Cases 
+- Each one of these cases needs to be handled and tested with UI Components, API Endpoints, and database queries.
+- The UI components will generate JSON requests based on user input and application state
+
+
+#### Menu
+- Create a new menu
+- Add an Item to an existing Menu
+- Remove an Item from an Existing menu
+- View Existing Menu
+- View Existing Menus
+- Update Menu Details
+- Delete a Menu
+
+#### MenuItem
+(Menu items can be used (on one or more menus) or unused)
+- Create a new MenuItem
+- Update MenuItem details (Name, Price, Category)
+- Remove a MenuItem

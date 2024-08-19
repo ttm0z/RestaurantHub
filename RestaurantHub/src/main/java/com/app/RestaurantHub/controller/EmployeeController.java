@@ -34,13 +34,13 @@ public class EmployeeController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Employee> updateEmployee(@PathVariable Long id, @RequestBody Employee EmployeeDetails) {
+    public ResponseEntity<Employee> updateEmployee(@PathVariable Long id, @RequestBody Employee employeeDetails) {
         Optional<Employee> employee = EmployeeService.getEmployeeById(id);
         if (employee.isPresent()){
             Employee updatedEmployee = employee.get();
-            updatedEmployee.setFirstName(EmployeeDetails.getFirstName());
-            updatedEmployee.setLastName(EmployeeDetails.getLastName());
-            updatedEmployee.setEmail(EmployeeDetails.getEmail());
+            updatedEmployee.setFirstName(employeeDetails.getFirstName());
+            updatedEmployee.setLastName(employeeDetails.getLastName());
+            updatedEmployee.setEmail(employeeDetails.getEmail());
             //otherfieldsasneeded
             EmployeeService.saveEmployee(updatedEmployee);
             return ResponseEntity.ok(updatedEmployee);

@@ -15,8 +15,8 @@ public class ServiceTable {
     @Column(nullable = false)
     private int tableNumber;
 
-    @OneToOne(mappedBy = "table")
-    private Order order;
+    @Column(name = "order_id", nullable = true)
+    private Long orderId;
 
     @Column(name = "created_at", updatable = false, nullable = false)
     private LocalDateTime createdAt;
@@ -34,7 +34,7 @@ public class ServiceTable {
     public int getTableNumber() { return tableNumber; }
     public void setTableNumber(int tableNumber) { this.tableNumber = tableNumber; }
 
-    public Order getOrder() { return order; }
-    public void setOrder(Order order) { this.order = order; }
+    public Long getOrderId() { return orderId; }
+    public void setOrderId(Long orderId) { this.orderId = orderId; }
 
 }
