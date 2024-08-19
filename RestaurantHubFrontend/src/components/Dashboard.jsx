@@ -14,19 +14,19 @@ const Dashboard = () => {
             </ul>
             <div className="panel">
                 
-                <Link to = {'/menu-mgmt'}>
+                <Link to = {'/menus'}>
                     <button>Menu Manager</button>
                 </Link>
 
-                <Link to = {'/menu-item-mgmt'}>
+                <Link to = {'/menu-items'}>
                     <button>Menu Item Manager</button>
                 </Link>
 
-                <Link to = {'/order-mgmt'}>
+                <Link to = {'/orders'}>
                     <button>Order Manager</button>
                 </Link>
 
-                <Link to = {'/ticket-mgmt'}>
+                <Link to = {'/tickets'}>
                     <button>Ticketing System</button>
                 </Link>
 

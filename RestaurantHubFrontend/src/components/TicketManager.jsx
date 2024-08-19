@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./TicketManagement.css"
+import "./TicketManager.css"
 
-const TicketManagement = () => {
+const TicketManager = () => {
     
     return (
         <div className="ticket-mgmt-body">
@@ -28,4 +28,4 @@ const TicketManagement = () => {
     );
 };
 
-export default TicketManagement;
+export default TicketManager;

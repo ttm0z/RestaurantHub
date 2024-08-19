@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./OrderManagement.css"
+import "./OrderManager.css"
 
-const OrderManagement = () => {
+const OrderManager = () => {
     
     return (
         <div className="order-mgmt-body">
@@ -35,4 +35,4 @@ const OrderManagement = () => {
     );
 };
 
-export default OrderManagement;
+export default OrderManager;

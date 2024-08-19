@@ -2,12 +2,18 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Dashboard from './components/Dashboard';
-import MenuManagement from './components/MenuManagement';
-import OrderManagement from './components/OrderManagement';
-import MenuItems from './components/MenuItems';
-import TicketManagement from './components/TicketManagement';
+
+import MenuManager from './components/Menu/MenuManager';
+
+import OrderManager from './components/OrderManager';
+
+import MenuItemsManager from './components/MenuItem/MenuItemsManager';
+import CreateMenuItem from './components/MenuItem/CreateMenuItem';
+
+import TicketManager from './components/TicketManager';
 
 import './App.css';
+
 
 function App() {
     return (
@@ -16,10 +22,11 @@ function App() {
                 <div className="content">
                     <Routes>
                         <Route path="/" element={<Dashboard />} />
-                        <Route path="/menu-mgmt" element={<MenuManagement />} />
-                        <Route path="/menu-item-mgmt" element={<MenuItems />} />
-                        <Route path="/order-mgmt" element={<OrderManagement />} />
-                        <Route path="/ticket-mgmt" element={<TicketManagement />} />
+                        <Route path="/menus" element={<MenuManager />} />
+                        <Route path="/menu-items" element={<MenuItemsManager />} />
+                        <Route path="/menu-items/create" element={<CreateMenuItem />} />
+                        <Route path="/orders" element={<OrderManager />} />
+                        <Route path="/tickets" element={<TicketManager />} />
                     </Routes>
                 </div>
             </div>

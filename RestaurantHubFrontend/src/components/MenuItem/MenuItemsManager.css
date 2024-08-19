@@ -1,8 +1,8 @@
 .menu-item-mgmt-body{
-    border:1px solid rgb(0, 0, 0);
     width: 100vw; 
-    height: 100vh;
-    justify-content: center;
+    height: auto;
+    
+    padding-bottom: 50px;
 }
 
 .menu-item-mgmt{
@@ -10,12 +10,21 @@
     flex-direction: row;
     height:50%;
     justify-content: space-around;
-    border:1px solid rgb(0, 0, 0)
 }
-.menu-item-mgmt h3{
+.menu-items-header{
     border: 2px solid black;
     padding: 10px;
     border-radius: 5%;
     width: 100%;
     background-color: rgb(252, 125, 121);
+}
+.item-container {
+    border: 1px solid black;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+}
+.ctrl-panel{
+    padding-bottom: 20px;
 }

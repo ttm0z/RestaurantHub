@@ -1,0 +1,45 @@
+.list-container {
+    border: 1px solid black;
+    padding-bottom: 50px;
+}
+
+.item-container {
+    display: flex;
+    flex-direction: column; 
+    width: 30vw;
+    padding: 0; 
+    
+    overflow-y:scroll; 
+    
+}
+
+/* Search Input */
+.menu-item-panel input[type="text"] {
+    width: 100%;
+    border: 1px solid #ddd;
+    
+}
+
+.pagination-controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.pagination-controls button {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #5f1c1c;
+    cursor: pointer;
+}
+
+.pagination-controls button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.pagination-controls span {
+    font-size: 16px;
+}
