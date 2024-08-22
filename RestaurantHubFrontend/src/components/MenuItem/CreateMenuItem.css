@@ -1,0 +1,12 @@
+.create-item-container{
+    display: flex;
+    border: 1px solid black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}

@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import axios from 'axios';
 
-const useCreateMenuItem = () => {
+const useUpdateMenu = (menuId) => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
-    const createMenuItem = async (formData) => {
+    const updateMenu = async (formData) => {
         setLoading(true);
         try {
             console.log("data: ",formData);
-            const response = await axios.post(`http://localhost:8080/MenuItems`, formData, {
+            const response = await axios.put(`http://localhost:8080/Menus/${menuId}`, formData, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -24,7 +24,7 @@ const useCreateMenuItem = () => {
         }
     };
 
-    return { createMenuItem, loading, error };
+    return { updateMenu, loading, error };
 };
 
-export default useCreateMenuItem;
+export default useUpdateMenu;

@@ -1,0 +1,22 @@
+.create-menu-container{
+    display: flex;
+    border: 1px solid black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.form-group{
+    padding-bottom: 8px;
+}
+
+.form-group label{
+    color:aliceblue;
+    font-weight: 700;
+    background-color: rgb(131, 16, 16);
+}

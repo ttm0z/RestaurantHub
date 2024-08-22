@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/menus")
+@RequestMapping("/Menus")
 public class MenuController {
     
     @Autowired

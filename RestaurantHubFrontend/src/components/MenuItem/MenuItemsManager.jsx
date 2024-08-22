@@ -9,7 +9,6 @@ import "./MenuItemsManager.css"
 const MenuItemsManager = () => {
     
     return (
-        <div className="menu-item-mgmt-body">
             
         <div className="menu-item-mgmt">
             
@@ -27,12 +26,6 @@ const MenuItemsManager = () => {
             </div>
             
             </div>
-            
-        </div>
-        
-        
-        
-        
     );
 };
 

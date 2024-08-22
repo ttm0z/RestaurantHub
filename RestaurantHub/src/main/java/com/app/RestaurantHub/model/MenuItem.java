@@ -22,7 +22,7 @@ public class MenuItem {
 
     @PrePersist
     protected void onCreate() {
-        createdAt = LocalDateTime.now();
+        this.createdAt = LocalDateTime.now();
     }
 
     // Getters and Setters

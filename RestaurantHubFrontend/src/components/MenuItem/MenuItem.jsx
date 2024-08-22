@@ -3,10 +3,16 @@ import { Link } from 'react-router-dom';
 import './MenuItem.css';
 
 // You can use Font Awesome or Material Icons for the icons
-import { FaTrashAlt, FaEdit } from 'react-icons/fa';
+import { FaTrashAlt, FaEdit, FaPlusCircle} from 'react-icons/fa';
 
-const MenuItem = ({ item }) => {
+const MenuItem = ({ item, mode, onAddItem }) => {
     
+    const handleAddItem = () => {
+        if (onAddItem) {
+            onAddItem(item);
+        }
+    }
+
     return (
         <div className='menu-item'>
             
@@ -19,19 +25,27 @@ const MenuItem = ({ item }) => {
                     </div>
 
                     <div className='menu-item-actions'>
-
-                        <button className='edit-button' title='Edit'>
+                        {mode == "edit" ? (
+                            <>
+                            <button className='button1' title='Edit'>
                             <Link to={`/menu-item-mgmt/edit/${item.itemId}`}><FaEdit /></Link>
-                        </button>
+                            </button>
 
-                        <button className='delete-button' title='Delete'>
+                            <button className='button2' title='Delete'>
                             <Link to={`/menu-item-mgmt/delete/${item.itemId}`}><FaTrashAlt /></Link>
-                        </button>
+                            </button>    
+                            </>
+                        ):(
+                            <>
+                            <button onClick={handleAddItem} className='button1' title='Add'>
+                            <FaPlusCircle />
+                            </button>
+                            </>
+                        )}
+                        
                     </div>
             </div>
-            <div className='menu-item-bottom'>
-                <button>Add to Menu</button>
-            </div>
+
         </div>
             
         </div>
