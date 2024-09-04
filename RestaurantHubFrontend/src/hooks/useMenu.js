@@ -19,7 +19,7 @@ const useMenu = (menuId) => {
             }
         };
         fetchMenu();
-    }, []);
+    }, [menuId]);
 
     return {menu, loading, error};
 };

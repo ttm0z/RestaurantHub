@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     color: rgb(0, 0, 0);
-    background-color: #dddddd;
+    background-color: #faf7f7;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
 }
@@ -16,7 +16,6 @@
     margin: 0;
     font-size: 1.5em;
     color: rgb(1, 9, 17);
-
 }
 
 .items-list {
@@ -31,7 +30,6 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: italic;
     color: rgb(61, 65, 68);
-    
 }
 
 .control-panel {
