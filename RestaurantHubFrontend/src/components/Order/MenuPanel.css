@@ -1,0 +1,61 @@
+
+.menu-panel{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    border: 1px solid rgb(0, 0, 0);
+}
+.menus {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: auto;
+    gap: 5%; 
+    justify-content: center;
+    align-items: start; 
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.menus p {
+    border: 1px solid black;
+    padding: 3%;
+    background-color: rgb(255, 217, 217);
+    transition: background-color 0.3s ease-in-out, font-weight 0.5s ease-in, 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    box-sizing: border-box; 
+    height: 15vh;;
+    
+}
+p.selected-menu{
+    background-color: rgb(231, 90, 90, 0.7);
+    font-weight: 700;
+    border: 2px solid rgb(0, 0, 0);
+}
+.menus p:hover {
+    background-color: rgb(243, 156, 156);
+    padding-left: 4%;
+    padding-right: 4%;
+    font-weight: 700;
+}
+.items {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: auto;
+    gap:3%;
+    
+}
+.item {
+    border: 1px solid black;
+    width:auto;
+    height:15vh;
+    font-size: 14px;
+    background-color: rgb(222, 218, 236);
+    transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.item:hover {
+    
+    border: 2px solid black;
+    background-color: rgb(156, 218, 243);
+    font-weight: 700;
+
+}

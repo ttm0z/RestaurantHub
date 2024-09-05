@@ -5,27 +5,30 @@ import { Link } from "react-router-dom";
 import ItemList from './ItemList'
 
 import "./MenuItemsManager.css"
+import { FaHome, FaPlusCircle, FaTablet } from "react-icons/fa";
 
 const MenuItemsManager = () => {
     
     return (
-            
-        <div className="menu-item-mgmt">
-            
-            <div className="menu-item-panel" >
+            <>
+                <div className="menu-item-mgmt">
+                    <div className="menu-item-panel" >
+                        <div className="panel">
+                            <h2>Menu Items</h2>
+                            <Link to={'/'}> <FaHome className="icon"/> </Link>
+                            <Link to={'/menus'}> <FaTablet className="icon" /> </Link>
+                            <Link to={'/menu-items/create'}> <FaPlusCircle className="icon" /> </Link>
+                        </div>
+                        
+                        
                 
-                <h3 className="menu-items-header">Menu Items</h3>
-                <div className="ctrl-panel">
-                    <Link to={'/menus'}> <button>View Menus</button> </Link>
-                    <Link to={'/menu-items/create'}> <button>Create Menu Item</button> </Link>
-                    <Link to={'/'}> <button>Dashboard</button> </Link>
-                </div>
-                
-                <ItemList />
+                        <ItemList />
 
-            </div>
+                    </div>
             
-            </div>
+                </div>    
+            </>
+        
     );
 };
 

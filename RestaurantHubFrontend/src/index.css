@@ -44,6 +44,12 @@ button {
   transition: border-color 0.25s;
 }
 
+.invisible-button {
+  
+  border: none;
+  background-color:white;
+}
+
 button:hover {
-  border: 1.2px solid #000000;
+  
 }

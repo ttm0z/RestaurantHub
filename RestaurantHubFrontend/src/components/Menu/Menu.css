@@ -4,17 +4,43 @@
     flex-direction: column;
     color: rgb(0, 0, 0);
     background-color: #faf7f7;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
+    margin:0;
+    width: 80%;
+    padding: 0;
+    margin: 0px auto;
 }
-
+.toggle{
+    margin-right: 15%;
+}
 .menu-details {
     margin-bottom: 15px;
+    display: flex;
+    
+    justify-content: space-between;
+}
+.details-header{
+    display: flex;
+    width:50%;
+    justify-content: space-around;
+}
+.icon{
+    margin-right: 5%;
+    
+    font-size: 20px;
+    cursor: pointer;
+    color: #1f1b19;
+    padding: 1%;
+    transition: background-color 0.3s ease-in font-size 0.3s ease-in-out;
+}
+
+.icon:hover{
+    font-size: 21px;
+    color: rgb(134, 40, 40);
 }
 
 .menu-details h3 {
     margin: 0;
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: rgb(1, 9, 17);
 }
 
@@ -23,15 +49,54 @@
 }
 
 .menu-items {
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-style: italic;
-    color: rgb(61, 65, 68);
+    padding: 0 1% 1% 2%;
+    display: none;
+    align-items: baseline;
+    text-align: left;
+    margin: 5px 5px 10px;
+    
+    list-style-type: none;
+    min-width: 160px;
+    z-index: 1;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+
+}
+.menu-items.show {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    justify-content: baseline;
+    align-items: baseline;
+    opacity: 1;
+    height: auto; 
+    max-height: 50vh;
 }
 
+.menu-items li {
+    padding-bottom: 5%;
+    margin-bottom: 3%;
+    padding-right: 2%;
+    margin-left: 7%;
+    display:flex;
+    
+    border: 1px solid rgb(185, 173, 185);
+    border-left: none;
+    border-right: none;
+    
+    justify-content: space-between;
+}
+
+.delete-item {
+    margin-right:20%;
+    transition: color 0.3s ease-in-out;
+}
+.delete-item:hover {
+    margin-right:20%;
+    color: rgb(134, 40, 40);
+}
 .control-panel {
     display: flex;
     justify-content: space-around;

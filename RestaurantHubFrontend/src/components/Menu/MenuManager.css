@@ -3,13 +3,22 @@
     display: flex;
     flex-direction: column;
     width: 80vw;
-    justify-content: space-around;
     overflow-y: auto;
     border:1px solid rgb(0, 0, 0)
 }
-.menu-panel{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 
+.icons{
+    margin-right: 50%;
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+}
+.icons a{
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    transition: color 0.3s ease-in-out;
+}
+.icons a:hover{
+    font-size: 24px;
+    color: rgb(134, 40, 40);
 }

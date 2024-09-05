@@ -1,19 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './Dashboard.css'
+
 const Dashboard = () => {
     
     return (
-        <div>
-            <h1 className="dashboard-header">RestaurantHub Version 0.1</h1>
-            <ul>
-                <h3>To Do</h3>
-                <li>Populate database with some test data.</li>
-                <li>Elaborate further on use case analysis</li>
-                <li>Build out UI Components to fetch and serve existing data and post new data to database</li>
-            </ul>
+        <>
             <div className="panel">
-                
+                <h2>Dashboard</h2>
                 <Link to = {'/menus'}>
                     <button>Menu Manager</button>
                 </Link>
@@ -30,9 +24,29 @@ const Dashboard = () => {
                     <button>Ticketing System</button>
                 </Link>
 
+                <Link to = {'/dining-areas'}>
+                    <button>Dining Areas</button>
+                </Link>
+
+                <Link to = {'/employees'}>
+                    <button>Employee Management</button>
+                </Link>
+            
             </div>
             
-        </div>
+            <ul>
+                <h3>To Do -- Sept. 4, 2024</h3>
+                <li>Conduct more detailed Use Case Analysis</li>
+                <li>UI Prototyping. Finalize UI designs early</li>
+
+            </ul>
+            <div className="dashboard-panel">
+                
+
+
+            </div>
+            
+        </>
         
         
     );

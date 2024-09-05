@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './MenuItem.css';
 
-// You can use Font Awesome or Material Icons for the icons
+
 import { FaTrashAlt, FaEdit, FaPlusCircle} from 'react-icons/fa';
 
 const MenuItem = ({ item, mode, onAddItem }) => {
@@ -28,11 +28,11 @@ const MenuItem = ({ item, mode, onAddItem }) => {
                         {mode == "edit" ? (
                             <>
                             <button className='button1' title='Edit'>
-                            <Link to={`/menu-item-mgmt/edit/${item.itemId}`}><FaEdit /></Link>
+                            <Link to={`/menu-items/edit/${item.itemId}`}><FaEdit className='icon'/></Link>
                             </button>
 
                             <button className='button2' title='Delete'>
-                            <Link to={`/menu-item-mgmt/delete/${item.itemId}`}><FaTrashAlt /></Link>
+                            <Link to={`/menu-items/delete/${item.itemId}`}><FaTrashAlt className='icon'/></Link>
                             </button>    
                             </>
                         ):(

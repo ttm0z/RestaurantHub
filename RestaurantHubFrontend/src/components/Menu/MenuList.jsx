@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Menu from './Menu';
 
 import useMenus from '../../hooks/useMenus';
+import './MenuList.css';
 
 const MenuList = () => {
     const {menus, loading, error} = useMenus();

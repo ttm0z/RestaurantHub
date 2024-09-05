@@ -6,6 +6,7 @@ import ItemList from '../MenuItem/ItemList';
 import useCreateMenu from '../../hooks/useCreateMenu';
 
 import "./CreateMenu.css";
+import { FaArrowCircleLeft, FaPlusCircle } from 'react-icons/fa';
 
 
 
@@ -48,11 +49,14 @@ const CreateMenu = ({ }) => {
                         onChange={(e) => setMenuName(e.target.value)}
                         required
                     />
+                    <button className='invisible-button' type="submit"><FaPlusCircle className='icon'/></button>
                 </div>
                 
-                <button type="submit">Create Menu</button>
+                
             </form>
-            <Link to={`/menus`}><button>Back to Menus</button></Link>
+            <Link to={`/menus`}>
+                    <FaArrowCircleLeft className="icon" />
+            </Link>
         </div>
     );
 };

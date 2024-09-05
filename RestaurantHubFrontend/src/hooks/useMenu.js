@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const useMenu = (menuId) => {
+const useMenu = (menuId, reloadKey) => {
     const [menu, setMenu] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -19,9 +19,19 @@ const useMenu = (menuId) => {
             }
         };
         fetchMenu();
-    }, [menuId]);
+    }, [menuId, reloadKey]);
 
-    return {menu, loading, error};
+    const deleteMenu = async () => {
+        try {
+            await axios.delete(`http://localhost:8080/Menus/${menuId}`);
+            // Trigger a re-fetch by updating the reloadKey
+        } catch (error) {
+            console.error("Error removing menu:", error);
+            setError(error);
+        }
+    };
+
+    return { menu, loading, error, deleteMenu };
 };
 
 export default useMenu;

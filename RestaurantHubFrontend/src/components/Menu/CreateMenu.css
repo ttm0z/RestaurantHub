@@ -2,8 +2,6 @@
     display: flex;
     border: 1px solid black;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 form{
     display: flex;
@@ -15,8 +13,3 @@ form{
     padding-bottom: 8px;
 }
 
-.form-group label{
-    color:aliceblue;
-    font-weight: 700;
-    background-color: rgb(131, 16, 16);
-}
