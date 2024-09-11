@@ -30,6 +30,7 @@ public class EmployeeController {
 
     @PostMapping
     public Employee createEmployee(@RequestBody Employee employee) {
+        System.out.println("\n" + employee + "\n");
         return EmployeeService.saveEmployee(employee);
     }
 

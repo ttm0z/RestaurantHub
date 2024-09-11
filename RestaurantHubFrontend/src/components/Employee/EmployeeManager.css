@@ -1,0 +1,11 @@
+.employee-list{
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);;
+    gap:2%
+}
+
+.employee{
+    border:1px solid black;
+    padding:1%;
+    margin-bottom: 2%;
+}

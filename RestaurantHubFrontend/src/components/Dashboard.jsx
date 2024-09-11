@@ -24,8 +24,8 @@ const Dashboard = () => {
                     <button>Ticketing System</button>
                 </Link>
 
-                <Link to = {'/dining-areas'}>
-                    <button>Dining Areas</button>
+                <Link to = {'/service-areas'}>
+                    <button>Service Areas</button>
                 </Link>
 
                 <Link to = {'/employees'}>

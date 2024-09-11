@@ -1,16 +1,40 @@
 import { Link } from "react-router-dom";
-
+import useEmployees from "../../hooks/useEmployees";
+import { FaHome, FaPlusCircle } from "react-icons/fa";
+import "./EmployeeManager.css"
 const EmployeeManager = () => {
+    
+    const {employees, loading, error} = useEmployees();
+
     return (
         <>
-            <h3>Employee Manager</h3>
-            <ul>
-                <li>Get Employees</li>
-                <li>Create, Delete Employee</li>
-                <li>Update Employee Details</li>
-                <li>Other Employee Management Tools</li>
-            </ul>
-            <Link to={'/'}><button>Dashboard</button></Link>
+            <div className="panel">
+                <h2>Employee Manager</h2>
+                
+                <Link to={`/`}>
+                    <FaHome className="icon"/>
+                </Link>
+                
+                
+            </div>
+            <div className="panel">
+                <h3>Employees</h3>
+                <Link to={`/employees/create`}>
+                    <FaPlusCircle className="icon"/>
+                </Link>
+            </div>
+            
+            <div className="employee-list">
+                
+                {employees && employees.map(employee => (
+                    <div className="employee">
+                        <h3>{employee.firstName} {employee.lastName}</h3>
+                        <p>{employee.category}</p>
+                        <p>$ {employee.salary} / hr</p>
+                    </div>
+                    
+                ))}
+            </div>
         </>
     );
 };

@@ -13,10 +13,12 @@ import EditMenuItem from './components/MenuItem/EditMenuItem';
 import OrderManager from './components/Order/OrderManager';
 import TicketManager from './components/Ticket/TicketManager';
 import EmployeeManager from './components/Employee/EmployeeManager';
-import DiningAreaManager from './components/DiningArea/DiningAreaManager';
+import CreateEmployee from './components/Employee/CreateEmployee';
+import ServiceAreaManager from './components/DiningArea/ServiceAreaManager';
 
 
 import './App.css';
+import CreateServiceArea from './components/DiningArea/CreateServiceArea';
 
 
 function App() {
@@ -38,7 +40,10 @@ function App() {
                         <Route path="/orders" element={<OrderManager />} />
                         <Route path="/tickets" element={<TicketManager />} />
                         <Route path="/employees" element={<EmployeeManager />} />
-                        <Route path="/dining-areas" element={<DiningAreaManager />} />
+                        <Route path="/employees/create" element={<CreateEmployee />} />
+
+                        <Route path="/service-areas" element={<ServiceAreaManager />} />
+                        <Route path="/service-areas/create" element={<CreateServiceArea />} />
 
                     </Routes>
                 </div>

@@ -4,6 +4,10 @@
 .panel{
   display: flex;
   flex-direction: row;    
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: baseline;
+  gap: 2vw
+}
+.icon{
+  margin-left: 2%
 }
